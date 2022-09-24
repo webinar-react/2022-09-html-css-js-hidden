@@ -15,7 +15,9 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
 }
-
+.chat-na-avatar{
+    padding: 5px 10px;
+}
 .chat-nav-bar {
     width: 100%;
     background-color: white;
@@ -29,8 +31,11 @@ body {
 .chat-nav-bar ul {
     display: flex;
     list-style: none;
+    gap: 10px;
 }
-
+.chat-nav-bar li:hover{
+    cursor: pointer;
+}
 
 
 /* OVERRIDE STYLE FOR ICONS */

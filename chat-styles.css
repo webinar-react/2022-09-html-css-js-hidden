@@ -254,21 +254,71 @@
 .chat-body .unstyled-list-messages {
     list-style: none;
     padding: 0;
+    width: 100%;
+}
+
+.message-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+
+}
+
+.message-body {
+    flex-direction: column;
+    display: flex;
+}
+
+.message-container.sent {
+    align-items: flex-end;
+}
+
+.message-container.recived {
+    align-items: flex-start;
 }
 
 
 .message-box {
     padding: 10px 15px;
     color: #272b41;
+    position: relative;
 }
 
+
+
+
 .message-box.sent {
-    background-color: #e3e3e3;
+    background-color: #DCF8C6;
 }
 
 .message-box.recived {
     background-color: white;
 }
+
+.message-box.sent::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #DCF8C6;
+}
+
+
+.message-box.recived::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
 
 .message-time {
     color: rgba(50, 65, 72, 0.4);
